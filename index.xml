@@ -6,7 +6,7 @@
     <description>Recent content on isaac_cao&#39;s blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 31 Oct 2025 02:24:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Oct 2025 02:27:55 +0000</lastBuildDate>
     <atom:link href="https://amazing-c.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Title_of_the_post</title>
@@ -20,7 +20,7 @@
       <link>https://amazing-c.github.io/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://amazing-c.github.io/readme/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;ͻhugogithub-pages&#34;&gt;�����ͻ���hugo+github pages�&lt;/h2&gt;&#xA;&lt;h2 id=&#34;ҳʹgithub-style-ģ&#34;&gt;ҳ��ʹ��github-style ģ��&lt;/h2&gt;</description>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h3 id=&#34;本博客基于hugogithub-pages-搭建&#34;&gt;本博客基于hugo+github pages 搭建&lt;/h3&gt;&#xA;&lt;h3 id=&#34;页面使用github-style-模板&#34;&gt;页面使用github-style 模板&lt;/h3&gt;</description>
     </item>
   </channel>
 </rss>
