@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://amazing-c.github.io/css/light.css' />
     <link rel="stylesheet" href='https://amazing-c.github.io/css/dark.css' />
     <link rel="stylesheet" href='https://amazing-c.github.io/css/syntax.css' />
-    <title>第一个测试markdown文件 - isaac_cao&#39;s blog</title>
+    <title>正则表达式 - isaac_cao&#39;s blog</title>
     
     <link rel="icon" type="image/x-icon" href='/images/github-mark.png'>
     
@@ -21,7 +21,8 @@
 
     
     <meta name="description"
-  content="正则表达式 相关符号含义理解 [] 表示 其中的内容有一个满足条件就行 ^ 表示 字符串开头 在[]内部的 ^ 表示非 $ 表示 字符串结尾 . 表示一个任意字符 除了换行符号\n * 表示前面字符0个或多个字符 &#43; 表示前面有1个或以上满足 ? 表示前面字符的可以有也可以没有 \d 表示纯数字 \B 表示 单词边界（单词中间） \b 表示非单词边界（单词和其他字符的中间） {} 表示 其中的内容表示前面字符出现的次数 eg. {n} 前面的字符N次 ,{2,} 前面的字符 2次以上 () 表示 子匹配项 可以把一个很长的需求 分解为多个小需求 然后 分别匹配需求 括号中间可以写 正则表达式 （）匹配到的结果会存储起来 “捕获组” (?:xxx) 这个不会存储 \w :匹配数字 字母 下划线 = [A-Za-z0-9 _] \s 匹配空白字符 （空格、制表符\t、换行符\n等） \W 表示非\w = [^A-Za-z0-9] \S表示非\s \D 表示非\d 相关概念 贪婪匹配：尽可能匹配的长，eg. a1bcccccbc a.*b → a1bcccccb 非贪婪匹配：尽可能匹配的短，eg. a1bcccccbc a.?b → a1b 零宽断言：不匹配具体字符，只判断 “位置” 是否满足条件（“零宽” 指不占用字符长度） " />
+  content="正则表达式 相关符号含义理解 [] 表示 其中的内容有一个满足条件就行 ^ 表示 字符串开头 在[]内部的 ^ 表示非 $ 表示 字符串结尾 . 表示一个任意字符 除了换行符号\n * 表示前面字符0个或多个字符 &#43; 表示前面有1个或以上满足 ? 表示前面字符的可以有也可以没有 \d 表示纯数字 \B 表示 单词边界（单词中间） \b 表示非单词边界（单词和其他字符的中间） {} 表示 其中的内容表示前面字符出现的次数 eg. {n} 前面的字符N次 ,{2,} 前面的字符 2次以上 () 表示 子匹配项 可以把一个很长的需求 分解为多个小需求 然后 分别匹配需求 括号中间可以写 正则表达式 （）匹配到的结果会存储起来 “捕获组” (?:xxx) 这个不会存储 \w :匹配数字 字母 下划线 = [A-Za-z0-9 _] \s 匹配空白字符 （空格、制表符\t、换行符\n等） \W 表示非\w = [^A-Za-z0-9] \S表示非\s \D 表示非\d 相关概念 贪婪匹配：尽可能匹配的长，eg. a1bcccccbc a.*b → a1bcccccb 非贪婪匹配：尽可能匹配的短，eg. a1bcccccbc a.?b → a1b 零宽断言：不匹配具体字符，只判断 “位置” 是否满足条件（“零宽” 指不占用字符长度） 正则表达式使用 python re 模块 flags--flags修饰符：用来改正则表达式的匹配行为 eg. 忽略大小写 匹配多行 正则表达式可加空格 注释之类
+" />
 <meta name="keywords"
   content='blog, google analytics' />
 <meta name="robots" content="noodp" />
@@ -29,9 +30,10 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="第一个测试markdown文件 - isaac_cao&#39;s blog" />
+<meta name="twitter:title" content="正则表达式 - isaac_cao&#39;s blog" />
 <meta name="twitter:description"
-  content="正则表达式 相关符号含义理解 [] 表示 其中的内容有一个满足条件就行 ^ 表示 字符串开头 在[]内部的 ^ 表示非 $ 表示 字符串结尾 . 表示一个任意字符 除了换行符号\n * 表示前面字符0个或多个字符 &#43; 表示前面有1个或以上满足 ? 表示前面字符的可以有也可以没有 \d 表示纯数字 \B 表示 单词边界（单词中间） \b 表示非单词边界（单词和其他字符的中间） {} 表示 其中的内容表示前面字符出现的次数 eg. {n} 前面的字符N次 ,{2,} 前面的字符 2次以上 () 表示 子匹配项 可以把一个很长的需求 分解为多个小需求 然后 分别匹配需求 括号中间可以写 正则表达式 （）匹配到的结果会存储起来 “捕获组” (?:xxx) 这个不会存储 \w :匹配数字 字母 下划线 = [A-Za-z0-9 _] \s 匹配空白字符 （空格、制表符\t、换行符\n等） \W 表示非\w = [^A-Za-z0-9] \S表示非\s \D 表示非\d 相关概念 贪婪匹配：尽可能匹配的长，eg. a1bcccccbc a.*b → a1bcccccb 非贪婪匹配：尽可能匹配的短，eg. a1bcccccbc a.?b → a1b 零宽断言：不匹配具体字符，只判断 “位置” 是否满足条件（“零宽” 指不占用字符长度） " />
+  content="正则表达式 相关符号含义理解 [] 表示 其中的内容有一个满足条件就行 ^ 表示 字符串开头 在[]内部的 ^ 表示非 $ 表示 字符串结尾 . 表示一个任意字符 除了换行符号\n * 表示前面字符0个或多个字符 &#43; 表示前面有1个或以上满足 ? 表示前面字符的可以有也可以没有 \d 表示纯数字 \B 表示 单词边界（单词中间） \b 表示非单词边界（单词和其他字符的中间） {} 表示 其中的内容表示前面字符出现的次数 eg. {n} 前面的字符N次 ,{2,} 前面的字符 2次以上 () 表示 子匹配项 可以把一个很长的需求 分解为多个小需求 然后 分别匹配需求 括号中间可以写 正则表达式 （）匹配到的结果会存储起来 “捕获组” (?:xxx) 这个不会存储 \w :匹配数字 字母 下划线 = [A-Za-z0-9 _] \s 匹配空白字符 （空格、制表符\t、换行符\n等） \W 表示非\w = [^A-Za-z0-9] \S表示非\s \D 表示非\d 相关概念 贪婪匹配：尽可能匹配的长，eg. a1bcccccbc a.*b → a1bcccccb 非贪婪匹配：尽可能匹配的短，eg. a1bcccccbc a.?b → a1b 零宽断言：不匹配具体字符，只判断 “位置” 是否满足条件（“零宽” 指不占用字符长度） 正则表达式使用 python re 模块 flags--flags修饰符：用来改正则表达式的匹配行为 eg. 忽略大小写 匹配多行 正则表达式可加空格 注释之类
+" />
 <meta name="twitter:site" content="https://amazing-c.github.io/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -39,11 +41,12 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="第一个测试markdown文件 - isaac_cao&#39;s blog">
+<meta property="og:title" content="正则表达式 - isaac_cao&#39;s blog">
 <meta property="og:description"
-  content="正则表达式 相关符号含义理解 [] 表示 其中的内容有一个满足条件就行 ^ 表示 字符串开头 在[]内部的 ^ 表示非 $ 表示 字符串结尾 . 表示一个任意字符 除了换行符号\n * 表示前面字符0个或多个字符 &#43; 表示前面有1个或以上满足 ? 表示前面字符的可以有也可以没有 \d 表示纯数字 \B 表示 单词边界（单词中间） \b 表示非单词边界（单词和其他字符的中间） {} 表示 其中的内容表示前面字符出现的次数 eg. {n} 前面的字符N次 ,{2,} 前面的字符 2次以上 () 表示 子匹配项 可以把一个很长的需求 分解为多个小需求 然后 分别匹配需求 括号中间可以写 正则表达式 （）匹配到的结果会存储起来 “捕获组” (?:xxx) 这个不会存储 \w :匹配数字 字母 下划线 = [A-Za-z0-9 _] \s 匹配空白字符 （空格、制表符\t、换行符\n等） \W 表示非\w = [^A-Za-z0-9] \S表示非\s \D 表示非\d 相关概念 贪婪匹配：尽可能匹配的长，eg. a1bcccccbc a.*b → a1bcccccb 非贪婪匹配：尽可能匹配的短，eg. a1bcccccbc a.?b → a1b 零宽断言：不匹配具体字符，只判断 “位置” 是否满足条件（“零宽” 指不占用字符长度） " />
+  content="正则表达式 相关符号含义理解 [] 表示 其中的内容有一个满足条件就行 ^ 表示 字符串开头 在[]内部的 ^ 表示非 $ 表示 字符串结尾 . 表示一个任意字符 除了换行符号\n * 表示前面字符0个或多个字符 &#43; 表示前面有1个或以上满足 ? 表示前面字符的可以有也可以没有 \d 表示纯数字 \B 表示 单词边界（单词中间） \b 表示非单词边界（单词和其他字符的中间） {} 表示 其中的内容表示前面字符出现的次数 eg. {n} 前面的字符N次 ,{2,} 前面的字符 2次以上 () 表示 子匹配项 可以把一个很长的需求 分解为多个小需求 然后 分别匹配需求 括号中间可以写 正则表达式 （）匹配到的结果会存储起来 “捕获组” (?:xxx) 这个不会存储 \w :匹配数字 字母 下划线 = [A-Za-z0-9 _] \s 匹配空白字符 （空格、制表符\t、换行符\n等） \W 表示非\w = [^A-Za-z0-9] \S表示非\s \D 表示非\d 相关概念 贪婪匹配：尽可能匹配的长，eg. a1bcccccbc a.*b → a1bcccccb 非贪婪匹配：尽可能匹配的短，eg. a1bcccccbc a.?b → a1b 零宽断言：不匹配具体字符，只判断 “位置” 是否满足条件（“零宽” 指不占用字符长度） 正则表达式使用 python re 模块 flags--flags修饰符：用来改正则表达式的匹配行为 eg. 忽略大小写 匹配多行 正则表达式可加空格 注释之类
+" />
 <meta property="og:url" content="https://amazing-c.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" />
-<meta property="og:site_name" content="第一个测试markdown文件" />
+<meta property="og:site_name" content="正则表达式" />
 <meta property="og:image"
   content="https://amazing-c.github.io/">
 <meta property="og:image:width" content="2048">
@@ -144,7 +147,7 @@
                   </span>
                   <span class="path-divider">/</span>
                   <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
-                    <a href="https://amazing-c.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">第一个测试markdown文件</a>
+                    <a href="https://amazing-c.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
                   </strong>
                 </h1>
                 <div class="note m-0">
@@ -154,9 +157,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 03 Nov 2025 01:55:53 &#43;0000"
+                  Modified <relative-time datetime="Mon, 03 Nov 2025 08:31:06 &#43;0000"
                     class="no-wrap">
-                    Mon, 03 Nov 2025 01:55:53 &#43;0000</relative-time>
+                    Mon, 03 Nov 2025 08:31:06 &#43;0000</relative-time>
                   
                 </div>
               </div>
@@ -186,7 +189,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      407 Words
+                      1188 Words
                     
 
                   </div>
@@ -224,7 +227,77 @@
 <li>非贪婪匹配：尽可能匹配的短，eg. a1bcccccbc     a.?b    →  a1b</li>
 <li>零宽断言：不匹配具体字符，只判断 “位置” 是否满足条件（“零宽” 指不占用字符长度）</li>
 </ul>
-</article>
+<h1 id="正则表达式使用">正则表达式使用</h1>
+<h2 id="python">python</h2>
+<h3 id="re-模块">re 模块</h3>
+<p><code>flags--flags修饰符：用来改正则表达式的匹配行为 eg. 忽略大小写 匹配多行 正则表达式可加空格 注释之类</code></p>
+<ol>
+<li>re.match(pattern, string, flags=0)
+<ul>
+<li>匹配字符串的开头</li>
+<li>是否string开头 满足 pattern 就返回Match对象，不满足就返回None</li>
+<li>应用：手机号开头匹配 身份证开头匹配</li>
+</ul>
+</li>
+<li>re.search(pattern, string, flags=0)
+<ul>
+<li>整个字符串</li>
+<li>是否string 中有满足 pattern，只要有一个， 就返回Match对象，没有就返回None</li>
+<li>应用：查询是否有关键词</li>
+</ul>
+</li>
+<li>re.findall(pattern, string, flags=0)
+<ul>
+<li>整个字符串</li>
+<li>是否string 中有满足 pattern，满足就返回一个列表</li>
+<li>应用：查询所有满足的关键词</li>
+</ul>
+</li>
+<li>re.finditer(pattern, string, flags=0)
+<ul>
+<li>整个字符串</li>
+<li>是否string 中有满足 pattern，满足就返回一个迭代器</li>
+<li>应用：查询所有满足的关键词的迭代器</li>
+</ul>
+</li>
+<li>re.sub(pattern, repl, string, count=0, flags=0)
+<ul>
+<li>整个字符串</li>
+<li>如果string 中有满足 pattern，满足就替换成repl，返回替换后的字符串</li>
+<li>应用：替换字符串</li>
+</ul>
+</li>
+<li>re.split(pattern, string, maxsplit=0, flags=0)
+<ul>
+<li>整个字符串</li>
+<li>如果string 中有满足 pattern，满足分割字符串，返回分割后的字符串的列表</li>
+<li>应用：分割字符串</li>
+</ul>
+</li>
+<li>re.compile(pattern, flags=0)
+<ul>
+<li>预编译正则表达式</li>
+<li>返回Pattern对象</li>
+<li>应用：多次使用同一正则表达式的场景,提高效率</li>
+<li>eg. pattern = re.compile(r&rsquo;\d+&rsquo;) match = pattern.match(&lsquo;123456&rsquo;)</li>
+</ul>
+</li>
+</ol>
+<h2 id="javascript">javaScript</h2>
+<h3 id="正则表达式在javascript-中-内置-下面是两种定义方法">正则表达式在JavaScript 中 内置 下面是两种定义方法</h3>
+<ol>
+<li>
+<p>构造函数：const regex = new RegExp(pattern, flags)</p>
+</li>
+<li>
+<p>字面量：const regex = /pattern/flags</p>
+</li>
+</ol>
+<h2 id="注意python-和-javascript-的正则表达式语法不同">注意：python 和 javaScript 的正则表达式语法不同</h2>
+<pre tabindex="0"><code>- python 内置的字符串不支持 正则表达式 作为输入参数 需要使用re模块 例如str.replace(old,new,count)。如果需要使用正则表达式来替换字符串（例如替换所有数字），需要使用re.sub()
+- js 字符串内置了正则表达式 例如str.replace(regex, replacement) 可以使用正则表达式作为参数,同时上面的 const regex = /pattern/flags 也可以使用 regex.test(str) regex.exec(str) 这种方法
+- 注意 js中 const regex = /pattern/flags 这种模式需要用/ / 包裹正则表达式 同时后面需要添加 g i 之类的修饰,而通过 new RegExp(pattern, flags) 这种模式则不需要 但是区别转义字符 还是需要用 \\d+ 类似于 python 中的 r&#39;\d+&#39;
+</code></pre></article>
               </div>
             </div>
           </div>
