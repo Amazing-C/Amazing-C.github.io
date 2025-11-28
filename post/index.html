@@ -153,7 +153,7 @@
                 </path>
               </svg>
               Posts
-              <span class="Counter">2</span>
+              <span class="Counter">3</span>
             </a>
           </nav>
           <div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
@@ -470,7 +470,7 @@
         </path>
       </svg>
       Posts
-      <span class="Counter ">2</span>
+      <span class="Counter ">3</span>
     </a>
   </nav>
 </div>
@@ -484,6 +484,32 @@
         
       
       <ul>
+        
+        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
+          <div class="col-12 d-inline-block">
+            <div class="d-inline-block mb-1">
+              <h3 class="wb-break-all">
+                <a href="https://amazing-c.github.io/post/%E4%B8%80%E4%BA%9B%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%A1%A8%E6%A0%BC/">django ruoyi</a>
+              </h3>
+            </div>
+
+            <div>
+              <div class="col-12 d-inline-block text-gray mb-2 pr-4">
+                <h2 id="django-ruoyi">Django ruoyi</h2>
+              </div>
+            </div>
+
+            <div class="f6 text-gray mt-2">
+              
+
+              Created
+              <relative-time datetime=" Wed, 05 Nov 2025 14:32:00 &#43;0800" class="no-wrap"
+                title=" Wed, 05 Nov 2025 14:32:00 &#43;0800">
+                Wed, 05 Nov 2025 14:32:00 &#43;0800
+              </relative-time>
+            </div>
+          </div>
+        </li>
         
         <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
           <div class="col-12 d-inline-block">
@@ -506,7 +532,8 @@
 <li>+ 表示前面有1个或以上满足</li>
 <li>? 表示前面字符的可以有也可以没有</li>
 <li>\d 表示纯数字</li>
-<li>\B 表示 单词边界（单词中间）  \b 表示非单词边界（单词和其他字符的中间）</li>
+<li>\B 表示 非单词边界  两边必须是同种类型的 常用于表示存在 内部的子字符串 eg. helloworld   用 \Brld\B 查找不到</li>
+<li>\b 表示单词边界 常用于匹配子字符串，一侧必须被非单词包裹 或为空 ，另一侧为单词，单词(包括_)与非单词的夹缝  eg.  ,helloworld, \bhelloworld\b 可以查到 但是 如果字符串是 hhelloworldd \bhelloworld\b 就什么都差不到</li>
 <li>{} 表示 其中的内容表示前面字符出现的次数 eg. {n} 前面的字符N次 ,{2,} 前面的字符 2次以上</li>
 <li>() 表示 子匹配项 可以把一个很长的需求 分解为多个小需求 然后 分别匹配需求 括号中间可以写 正则表达式 （）匹配到的结果会存储起来 “捕获组”  (?:xxx) 这个不会存储</li>
 <li>\w :匹配数字 字母 下划线 = [A-Za-z0-9 _]</li>
