@@ -571,13 +571,40 @@
           <div class="col-12 d-inline-block">
             <div class="d-inline-block mb-1">
               <h3 class="wb-break-all">
-                <a href="https://amazing-c.github.io/post/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95markdown%E6%96%87%E4%BB%B6/">第一个测试markdown文件</a>
+                <a href="https://amazing-c.github.io/post/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95markdown%E6%96%87%E4%BB%B6/">linux 常用命令</a>
               </h3>
             </div>
 
             <div>
               <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                <p>这是一个测试文件</p>
+                <p>linux 常用命令</p>
+<ol>
+<li>
+<p>目录文件定位：ls/cd/pwd</p>
+<p>• ls：文件信息全掌握，基础用法ls -lah，进阶用法包括ls -lt（按修改时间排序）、ls -l | grep ^d（只显示目录）、ls -lhS（按文件大小降序排列）。</p>
+<p>• cd：目录切换零延迟，核心用法包括cd /etc/nginx（进入指定目录）、cd ..（退回上一级）、cd ~（回到家目录）、cd -（切换到上一次所在目录）。</p>
+<p>• pwd：路径确认不踩坑，显示完整绝对路径，避免路径错误。</p>
+</li>
+<li>
+<p>文件管理：touch/mkdir/rm</p>
+<p>• touch：快速创建文件，基础用法touch nginx.conf，进阶用法包括touch -d &ldquo;2025-12-01&rdquo; test.txt（创建指定修改时间的文件）。</p>
+<p>• mkdir：目录创建省时间，单目录创建mkdir /data/backup，多级目录创建mkdir -p /data/{logs,conf,backup}，设置权限mkdir -m 755 docs。</p>
+<p>• rm：删除操作需谨慎，删除文件rm -f old.log，删除目录rm -rf redundant_dir，安全技巧包括删除前确认内容、备份重要文件、避免在根目录执行危险命令。</p>
+</li>
+<li>
+<p>系统监控：free/df/top</p>
+<p>• free：内存状态秒掌握，基础用法free -h，进阶用法包括free -s 5（每隔5秒刷新）、free -m（以MB为单位显示）。</p>
+<p>• df：磁盘空间早预警，基础用法df -h，进阶用法包括df -i（查看inode使用情况）、df -h /data（查看特定分区）。</p>
+<p>• top：进程监控全视角，基础操作包括查看CPU和内存占用、终止异常进程，进阶用法包括top -p 1234（监控特定进程）、top -n 1 -b（非交互式输出）。</p>
+</li>
+<li>
+<p>远程运维：ssh</p>
+<p>• 密码登录：基础用法ssh <a href="mailto:root@192.168.1.100">root@192.168.1.100</a>，端口自定义ssh <a href="mailto:admin@10.0.0.5">admin@10.0.0.5</a> -p 2222。</p>
+<p>• 密钥登录：步骤包括生成密钥对、上传公钥、配置快捷登录，进阶技巧包括ssh代理转发，避坑提醒包括权限设置。</p>
+</li>
+<li>
+<p>运维效率技巧</p>
+<p>• 命令输入技巧：按Ctrl+U清空当前输入，Ctrl+K删除光标后的内容，Ctrl+W删除光标前的一个单词。</p>
               </div>
             </div>
 

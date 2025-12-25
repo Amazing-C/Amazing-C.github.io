@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://amazing-c.github.io/css/light.css' />
     <link rel="stylesheet" href='https://amazing-c.github.io/css/dark.css' />
     <link rel="stylesheet" href='https://amazing-c.github.io/css/syntax.css' />
-    <title>第一个测试markdown文件 - isaac_cao&#39;s blog</title>
+    <title>linux 常用命令 - isaac_cao&#39;s blog</title>
     
     <link rel="icon" type="image/x-icon" href='/images/github-mark.png'>
     
@@ -21,7 +21,24 @@
 
     
     <meta name="description"
-  content="这是一个测试文件
+  content="linux 常用命令
+目录文件定位：ls/cd/pwd
+• ls：文件信息全掌握，基础用法ls -lah，进阶用法包括ls -lt（按修改时间排序）、ls -l | grep ^d（只显示目录）、ls -lhS（按文件大小降序排列）。
+• cd：目录切换零延迟，核心用法包括cd /etc/nginx（进入指定目录）、cd ..（退回上一级）、cd ~（回到家目录）、cd -（切换到上一次所在目录）。
+• pwd：路径确认不踩坑，显示完整绝对路径，避免路径错误。
+文件管理：touch/mkdir/rm
+• touch：快速创建文件，基础用法touch nginx.conf，进阶用法包括touch -d &ldquo;2025-12-01&rdquo; test.txt（创建指定修改时间的文件）。
+• mkdir：目录创建省时间，单目录创建mkdir /data/backup，多级目录创建mkdir -p /data/{logs,conf,backup}，设置权限mkdir -m 755 docs。
+• rm：删除操作需谨慎，删除文件rm -f old.log，删除目录rm -rf redundant_dir，安全技巧包括删除前确认内容、备份重要文件、避免在根目录执行危险命令。
+系统监控：free/df/top
+• free：内存状态秒掌握，基础用法free -h，进阶用法包括free -s 5（每隔5秒刷新）、free -m（以MB为单位显示）。
+• df：磁盘空间早预警，基础用法df -h，进阶用法包括df -i（查看inode使用情况）、df -h /data（查看特定分区）。
+• top：进程监控全视角，基础操作包括查看CPU和内存占用、终止异常进程，进阶用法包括top -p 1234（监控特定进程）、top -n 1 -b（非交互式输出）。
+远程运维：ssh
+• 密码登录：基础用法ssh root@192.168.1.100，端口自定义ssh admin@10.0.0.5 -p 2222。
+• 密钥登录：步骤包括生成密钥对、上传公钥、配置快捷登录，进阶技巧包括ssh代理转发，避坑提醒包括权限设置。
+运维效率技巧
+• 命令输入技巧：按Ctrl&#43;U清空当前输入，Ctrl&#43;K删除光标后的内容，Ctrl&#43;W删除光标前的一个单词。
 " />
 <meta name="keywords"
   content='blog, google analytics' />
@@ -30,9 +47,26 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="第一个测试markdown文件 - isaac_cao&#39;s blog" />
+<meta name="twitter:title" content="linux 常用命令 - isaac_cao&#39;s blog" />
 <meta name="twitter:description"
-  content="这是一个测试文件
+  content="linux 常用命令
+目录文件定位：ls/cd/pwd
+• ls：文件信息全掌握，基础用法ls -lah，进阶用法包括ls -lt（按修改时间排序）、ls -l | grep ^d（只显示目录）、ls -lhS（按文件大小降序排列）。
+• cd：目录切换零延迟，核心用法包括cd /etc/nginx（进入指定目录）、cd ..（退回上一级）、cd ~（回到家目录）、cd -（切换到上一次所在目录）。
+• pwd：路径确认不踩坑，显示完整绝对路径，避免路径错误。
+文件管理：touch/mkdir/rm
+• touch：快速创建文件，基础用法touch nginx.conf，进阶用法包括touch -d &ldquo;2025-12-01&rdquo; test.txt（创建指定修改时间的文件）。
+• mkdir：目录创建省时间，单目录创建mkdir /data/backup，多级目录创建mkdir -p /data/{logs,conf,backup}，设置权限mkdir -m 755 docs。
+• rm：删除操作需谨慎，删除文件rm -f old.log，删除目录rm -rf redundant_dir，安全技巧包括删除前确认内容、备份重要文件、避免在根目录执行危险命令。
+系统监控：free/df/top
+• free：内存状态秒掌握，基础用法free -h，进阶用法包括free -s 5（每隔5秒刷新）、free -m（以MB为单位显示）。
+• df：磁盘空间早预警，基础用法df -h，进阶用法包括df -i（查看inode使用情况）、df -h /data（查看特定分区）。
+• top：进程监控全视角，基础操作包括查看CPU和内存占用、终止异常进程，进阶用法包括top -p 1234（监控特定进程）、top -n 1 -b（非交互式输出）。
+远程运维：ssh
+• 密码登录：基础用法ssh root@192.168.1.100，端口自定义ssh admin@10.0.0.5 -p 2222。
+• 密钥登录：步骤包括生成密钥对、上传公钥、配置快捷登录，进阶技巧包括ssh代理转发，避坑提醒包括权限设置。
+运维效率技巧
+• 命令输入技巧：按Ctrl&#43;U清空当前输入，Ctrl&#43;K删除光标后的内容，Ctrl&#43;W删除光标前的一个单词。
 " />
 <meta name="twitter:site" content="https://amazing-c.github.io/" />
 <meta name="twitter:creator" content="" />
@@ -41,12 +75,29 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="第一个测试markdown文件 - isaac_cao&#39;s blog">
+<meta property="og:title" content="linux 常用命令 - isaac_cao&#39;s blog">
 <meta property="og:description"
-  content="这是一个测试文件
+  content="linux 常用命令
+目录文件定位：ls/cd/pwd
+• ls：文件信息全掌握，基础用法ls -lah，进阶用法包括ls -lt（按修改时间排序）、ls -l | grep ^d（只显示目录）、ls -lhS（按文件大小降序排列）。
+• cd：目录切换零延迟，核心用法包括cd /etc/nginx（进入指定目录）、cd ..（退回上一级）、cd ~（回到家目录）、cd -（切换到上一次所在目录）。
+• pwd：路径确认不踩坑，显示完整绝对路径，避免路径错误。
+文件管理：touch/mkdir/rm
+• touch：快速创建文件，基础用法touch nginx.conf，进阶用法包括touch -d &ldquo;2025-12-01&rdquo; test.txt（创建指定修改时间的文件）。
+• mkdir：目录创建省时间，单目录创建mkdir /data/backup，多级目录创建mkdir -p /data/{logs,conf,backup}，设置权限mkdir -m 755 docs。
+• rm：删除操作需谨慎，删除文件rm -f old.log，删除目录rm -rf redundant_dir，安全技巧包括删除前确认内容、备份重要文件、避免在根目录执行危险命令。
+系统监控：free/df/top
+• free：内存状态秒掌握，基础用法free -h，进阶用法包括free -s 5（每隔5秒刷新）、free -m（以MB为单位显示）。
+• df：磁盘空间早预警，基础用法df -h，进阶用法包括df -i（查看inode使用情况）、df -h /data（查看特定分区）。
+• top：进程监控全视角，基础操作包括查看CPU和内存占用、终止异常进程，进阶用法包括top -p 1234（监控特定进程）、top -n 1 -b（非交互式输出）。
+远程运维：ssh
+• 密码登录：基础用法ssh root@192.168.1.100，端口自定义ssh admin@10.0.0.5 -p 2222。
+• 密钥登录：步骤包括生成密钥对、上传公钥、配置快捷登录，进阶技巧包括ssh代理转发，避坑提醒包括权限设置。
+运维效率技巧
+• 命令输入技巧：按Ctrl&#43;U清空当前输入，Ctrl&#43;K删除光标后的内容，Ctrl&#43;W删除光标前的一个单词。
 " />
 <meta property="og:url" content="https://amazing-c.github.io/post/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95markdown%E6%96%87%E4%BB%B6/" />
-<meta property="og:site_name" content="第一个测试markdown文件" />
+<meta property="og:site_name" content="linux 常用命令" />
 <meta property="og:image"
   content="https://amazing-c.github.io/">
 <meta property="og:image:width" content="2048">
@@ -147,7 +198,7 @@
                   </span>
                   <span class="path-divider">/</span>
                   <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
-                    <a href="https://amazing-c.github.io/post/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95markdown%E6%96%87%E4%BB%B6/">第一个测试markdown文件</a>
+                    <a href="https://amazing-c.github.io/post/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95markdown%E6%96%87%E4%BB%B6/">linux 常用命令</a>
                   </strong>
                 </h1>
                 <div class="note m-0">
@@ -157,9 +208,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Fri, 28 Nov 2025 06:12:47 &#43;0000"
+                  Modified <relative-time datetime="Thu, 25 Dec 2025 03:06:31 &#43;0000"
                     class="no-wrap">
-                    Fri, 28 Nov 2025 06:12:47 &#43;0000</relative-time>
+                    Thu, 25 Dec 2025 03:06:31 &#43;0000</relative-time>
                   
                 </div>
               </div>
@@ -189,7 +240,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      8 Words
+                      1086 Words
                     
 
                   </div>
@@ -201,7 +252,41 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><p>这是一个测试文件</p>
+                <article class="markdown-body entry-content container-lg"><p>linux 常用命令</p>
+<ol>
+<li>
+<p>目录文件定位：ls/cd/pwd</p>
+<p>• ls：文件信息全掌握，基础用法ls -lah，进阶用法包括ls -lt（按修改时间排序）、ls -l | grep ^d（只显示目录）、ls -lhS（按文件大小降序排列）。</p>
+<p>• cd：目录切换零延迟，核心用法包括cd /etc/nginx（进入指定目录）、cd ..（退回上一级）、cd ~（回到家目录）、cd -（切换到上一次所在目录）。</p>
+<p>• pwd：路径确认不踩坑，显示完整绝对路径，避免路径错误。</p>
+</li>
+<li>
+<p>文件管理：touch/mkdir/rm</p>
+<p>• touch：快速创建文件，基础用法touch nginx.conf，进阶用法包括touch -d &ldquo;2025-12-01&rdquo; test.txt（创建指定修改时间的文件）。</p>
+<p>• mkdir：目录创建省时间，单目录创建mkdir /data/backup，多级目录创建mkdir -p /data/{logs,conf,backup}，设置权限mkdir -m 755 docs。</p>
+<p>• rm：删除操作需谨慎，删除文件rm -f old.log，删除目录rm -rf redundant_dir，安全技巧包括删除前确认内容、备份重要文件、避免在根目录执行危险命令。</p>
+</li>
+<li>
+<p>系统监控：free/df/top</p>
+<p>• free：内存状态秒掌握，基础用法free -h，进阶用法包括free -s 5（每隔5秒刷新）、free -m（以MB为单位显示）。</p>
+<p>• df：磁盘空间早预警，基础用法df -h，进阶用法包括df -i（查看inode使用情况）、df -h /data（查看特定分区）。</p>
+<p>• top：进程监控全视角，基础操作包括查看CPU和内存占用、终止异常进程，进阶用法包括top -p 1234（监控特定进程）、top -n 1 -b（非交互式输出）。</p>
+</li>
+<li>
+<p>远程运维：ssh</p>
+<p>• 密码登录：基础用法ssh <a href="mailto:root@192.168.1.100">root@192.168.1.100</a>，端口自定义ssh <a href="mailto:admin@10.0.0.5">admin@10.0.0.5</a> -p 2222。</p>
+<p>• 密钥登录：步骤包括生成密钥对、上传公钥、配置快捷登录，进阶技巧包括ssh代理转发，避坑提醒包括权限设置。</p>
+</li>
+<li>
+<p>运维效率技巧</p>
+<p>• 命令输入技巧：按Ctrl+U清空当前输入，Ctrl+K删除光标后的内容，Ctrl+W删除光标前的一个单词。</p>
+<p>• 历史命令复用：使用history查看历史命令，!&lt;编号&gt;执行特定命令，Ctrl+R搜索历史命令。</p>
+<p>• 命令参数查询：使用command &ndash;help查看简要参数，man ls查看完整手册，info top查看详细用法。</p>
+<p>• 长命令保存：将常用复杂命令写入脚本，赋予执行权限后直接运行。</p>
+<p>• 命令执行不中断：使用nohup command &amp;避免断开ssh导致任务终止。</p>
+</li>
+</ol>
+<p>通过熟练掌握这些核心命令和技巧，运维人员可以高效应对日常工作中的大部分场景，提高工作效率并降低操作风险。</p>
 </article>
               </div>
             </div>
